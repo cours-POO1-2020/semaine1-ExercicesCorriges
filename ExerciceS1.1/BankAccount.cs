@@ -131,7 +131,7 @@ namespace BankAccountNS
 
             //Gestion de 1$ de taxe par credit
             _Balance += amount;
-            _Balance -= amount;
+            _Balance -= 1;
 
             Console.WriteLine($"Successfull: Balance is {Balance} $ on {this.CustomerName} account, (1$ tax applied).");
 
