@@ -35,8 +35,12 @@ namespace BankAccountNS
                 ba.Credit(Math.Round(rand.NextDouble() * MaxAmount,2));
                 Thread.Sleep(500);
 
-                ba.Debit(Math.Round(rand.NextDouble() * MaxAmount,2));
-                Thread.Sleep(500);
+                //Je ne veux que 10 credits mais 15 debits
+                if (i < 10)
+                {
+                    ba.Debit(Math.Round(rand.NextDouble() * MaxAmount, 2));
+                    Thread.Sleep(500);
+                }
 
             }
 
