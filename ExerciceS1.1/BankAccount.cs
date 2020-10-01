@@ -17,7 +17,7 @@ namespace BankAccountNS
              *  - Un credit d'un montant aletoire entre 0 et 100 dollars (MaxAmount)
              *  - Un debit d'un montant aletoire entre 0 et 100 dollars (MaxAmount)            
              * A chacune de ces operations il refuse un nombre negatif ou un debit superieur a la balance du compte
-             * Il affiche la blance apres chaqe operation
+             * Il affiche la blance apres chaque operation
              */
 
 
@@ -95,7 +95,8 @@ namespace BankAccountNS
             }
 
             //Gestion de 1$ de taxe par debit
-            _Balance -= amount-1;
+            _Balance -= amount;
+            _Balance -= 1;
             Console.WriteLine($"Successfull: Balance is {Balance} $ on {this.CustomerName} account, (1$ tax applied).");
             Console.WriteLine("---End operation---");
             Console.WriteLine();
@@ -125,7 +126,9 @@ namespace BankAccountNS
             }
 
             //Gestion de 1$ de taxe par credit
-            _Balance += amount-1;
+            _Balance += amount;
+            _Balance -= amount;
+
             Console.WriteLine($"Successfull: Balance is {Balance} $ on {this.CustomerName} account, (1$ tax applied).");
 
             Console.WriteLine("---End operation---");
