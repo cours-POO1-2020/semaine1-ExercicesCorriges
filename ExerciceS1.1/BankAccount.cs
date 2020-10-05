@@ -118,7 +118,7 @@ namespace BankAccountNS
                 Console.WriteLine();
                 return;
             }
-            //3) on ajoute la getsion du credit de 20 $ minimum
+            //3) on ajoute la gestion du credit de 20 $ minimum
             if (amount < 20)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
