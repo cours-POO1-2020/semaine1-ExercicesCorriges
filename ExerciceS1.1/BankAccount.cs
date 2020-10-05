@@ -18,6 +18,7 @@ namespace BankAccountNS
              *  - Un debit d'un montant aletoire entre 0 et 100 dollars (MaxAmount)            
              * A chacune de ces operations il refuse un nombre negatif ou un debit superieur a la balance du compte
              * Il affiche la blance apres chaque operation
+             *toto
              */
 
 
